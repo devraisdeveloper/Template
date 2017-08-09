@@ -1,0 +1,59 @@
+{
+    "table_name": "table_name",
+    "table_fields": {
+        "First_name": {
+            "type": "varchar",
+            "value": "45",
+            "rules": {
+                "min":"1",
+                "max":"45"
+            }
+        },
+        "Last_name": {
+            "type": "varchar",
+            "value": "45",
+            "rules": {
+                "min":"1",
+                "max":"45"
+            }
+        },
+        "Date_of_birth":{
+            "type": "date"
+        },
+        "Internal_company_ID": {
+            "type": "int",
+            "value": "11",
+            "rules":{
+                "min":"10000",
+                "max":"99999"
+            }
+        },
+        "Department": {
+            "type": "enum",
+            "value": [
+                "R&D",
+                "Sales",
+                "Marketing",
+                "Management"    
+            ]
+        },
+        "Use_company_car":{
+            "type":"boolean",
+            "value":"1"
+        }
+    },
+    "table_display_format": {
+        "Full name": [
+            "First_name",
+            "Last_name"
+        ],
+        "Date of birth": [
+            "Date_of_birth"
+        ],
+        "Internal company ID": [
+            "Internal_company_ID",
+            "Department",
+            "Use_company_car"
+        ]
+    }
+}

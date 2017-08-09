@@ -1,0 +1,29 @@
+{
+    "table_name": "my_custom_name",
+    "table_fields": {
+        "First_name": {
+            "type": "varchar",
+            "value": "45",
+            "rules": {
+                "min":"1",
+                "max":"45"
+            }
+        },
+        "Last_name": {
+            "type": "varchar",
+            "value": "45",
+            "rules": {
+                "min":"1",
+                "max":"45"
+            }
+        }
+    },
+    "table_display_format": {
+        "First name": [
+            "First_name"
+        ],
+        "Last name": [
+            "Last_name"
+        ]
+    }
+}
