@@ -47,11 +47,6 @@ class TableBuilder {
     public function createTable(string $json){
         
         $decodedArray = Json::decode($json, true);
-
-       /* echo '<pre>';
-        print_r(TemplateParser::TABLE_NAME);
-        echo '</pre>';
-        die();  */  
         
         // Get table attributes  
         foreach ($decodedArray[TemplateParser::TABLE_FIELDS] as $field => $properties){
@@ -101,19 +96,6 @@ class TableBuilder {
         $newFields = [];
         $deleteFields = [];
 
-       /* echo '<pre>';
-        print_r($oldAttributes);
-        echo '</pre>';
-
-        echo 'nnnnnnnnnnnnnnnnnnnnnnnn'."\n";
-
-        echo '<pre>';
-        print_r($newAttributes);
-        echo '</pre>';
-
-        die();*/
-
-
         // fields for update
         foreach($newAttributes[TemplateParser::TABLE_FIELDS] as $field => $properties){
             if(!in_array($field, array_keys($oldAttributes[TemplateParser::TABLE_FIELDS]))){
@@ -121,23 +103,11 @@ class TableBuilder {
             }
         }
 
-       /* echo '<pre>';
-        print_r($newFields);
-        echo '</pre>';
-
-        die();*/
-
         foreach($oldAttributes[TemplateParser::TABLE_FIELDS] as $field => $properties){
             if(!in_array($field, array_keys($newAttributes[TemplateParser::TABLE_FIELDS]))){
                 $deleteFields[] = $field; 
             }
         }
-
-      /*  echo '<pre>';
-        print_r($deleteFields);
-        echo '</pre>';
-
-        die();*/
 
         if(!empty($newFields)){
             $this->executeAddColumns($newFields, $newAttributes[TemplateParser::TABLE_NAME]);

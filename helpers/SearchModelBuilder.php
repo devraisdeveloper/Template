@@ -66,11 +66,6 @@ class SearchModelBuilder
     			}
     	}
 
-    	echo '<pre>';
-    	print_r($searchQuery);
-    	echo '</pre>';
-    	die();
-
     	return $searchQuery;	
 	}
 

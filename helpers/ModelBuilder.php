@@ -110,27 +110,6 @@ class ModelBuilder {
 	{
 		$finishedRules[] = $this->setRequired($tAttributes);
 
-		/*foreach ($tAttributes[TemplateParser::TABLE_FIELDS] as $field => $properties) {
-				if($properties[TemplateParser::FIELD_TYPE] == TemplateParser::VARCHAR_TYPE){
-					$finishedRules[] = $this->setVarchar($tAttributes);
-
-				}
-				if ($properties[TemplateParser::FIELD_TYPE] == TemplateParser::INT_TYPE) {
-					$finishedRules[] = $this->setInteger($tAttributes);
-
-				}
-				if ($properties[TemplateParser::FIELD_TYPE] == TemplateParser::DATE_TYPE) {
-					$finishedRules[] = $this->setDate($tAttributes);
-				}
-				if ($properties[TemplateParser::FIELD_TYPE] == TemplateParser::ENUM_TYPE) {
-					$finishedRules[] = $this->setEnum($tAttributes);
-				}
-				if ($properties[TemplateParser::FIELD_TYPE] == TemplateParser::BOOLEAN_TYPE) {
-					$finishedRules[] = $this->setBoolean($tAttributes);
-				}
-
-			}*/
-
 
 		$finishedRules[] = $this->setVarchar($tAttributes);
 
@@ -153,14 +132,6 @@ class ModelBuilder {
 
 	public function createAttributeLabels(array $tAttributes)
 	{
-		/*foreach($tAttributes[TemplateParser::TABLE_DISPLAY_FORMAT] as $field => $label){
-           foreach ($label as $key => $value) {
-           	$labels[$field] = $value;
-           }
-
-        }
-
-        return $labels;*/
 
         foreach($tAttributes[TemplateParser::TABLE_FIELDS] as $field => $properties){
            $labels[$field] = $field;
