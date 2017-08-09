@@ -145,9 +145,14 @@ I have saved a few examples. These are correctly build json files. You can just 
 
 The structure of json string is not difficult - consists of 3 parts [ "table_name", "table_fields", "table_display_format"]
 
-First - name of your table. 
+
+First - name of your table.
+
 Second - You give properties to your table fields. In regards to 'rules' - this is range for integer and string
+
 Third - How do you want to represent your info in the view.
+
+
 
 For example, in template1.json We want to see full name but in table see them seperatly.
 
